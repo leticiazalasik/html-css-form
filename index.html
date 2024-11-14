@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <form action="/enviar" method="POST" class="form" novalidate>
+
+        <!-- Cabeçalho do formulário -->
+        <header class="form-header">
+            <h2>Cadastro novo aluno</h2>
+            <p>Preencha seus dados abaixo:</p>
+        </header>
+
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+
+            <div class="form-group">
+
+                <label for="nome">Nome:</label>
+                <input type="text" autofocus id="nome" name="nome" required>
+
+                <label for="idade">Idade:</label>
+                <input type="number" name="idade" min="18" max="100">
+
+                <label for="nome">Telefone Principal:</label>
+                <input type="tel" name="telefone-principal" pattern="[0-9]{11}">
+
+                <label for="nascimento">Data do aniversário</label>
+                <input type="date" name="nascimento">
+
+                <div>
+                    <!-- Radio -->
+                    <input type="radio" name="genero" value="m" id="masculino">
+                    <label for="masculino">Masculino</label>
+                    <input type="radio" name="genero" value="f" id="feminino">
+                    <label for="feminino">Feminino</label>
+                </div>
+
+                <div>
+                    <!-- Select -->
+                    <label for="estado">Estado</label>
+                    <select name="estado">
+                        <option value="">Selecione...</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="RJ">Santa Catarina</option>
+                        <option value="RJ">Rio Grande do sul</option>
+                        <option value="RJ">Paraná</option>
+                    </select>
+                </div>
+
+                <div class="foto-perfil">
+                    <!-- Upload de imagem -->
+                    <label for="foto-perfil">Foto para seu perfil</label>
+                    <input type="file" name="foto-perfil" accept="image/*" capture="user">
+                </div>
+
+                <!-- Cor -->
+                <label for="cor-favorita">Cor favorita</label>
+                <input type="color" name="cor-favorita">
+
+                <!-- Área de texto -->
+                <label for="comentario">Se houver, digite aqui outras informaçôes importantes sobre seu perfil:</label>
+                <textarea name="mensagem" rows="4" cols="30" maxlength="200" placeholder="Digite aqui..."></textarea>
+
+                <div class="github">
+                    <label for="github">Github:</label>
+                    <input type="url" name="website">
+                </div>
+
+                <!-- Upload de arquivo -->
+                <label for="curriculo">Upload do currículo (PDF)</label>
+                <input type="file" name="curriculo" accept=".pdf,.doc,.docx" multiple>
+            </div>
+
+        </fieldset>
+
+
+        <fieldset>
+
+            <legend>Inscrição:</legend>
+
+            <div class="form-group">
+
+                <label for="email">Email:</label>
+                <input type="email" name="email" required>
+
+                <label for="senha">Senha:</label>
+                <input type="password" name="senha" minlength="8">
+
+                <label for="busca">Digite a cidade do seu polo</label>
+                <input type="search" name="busca">
+
+                <label for="data-inscricao">Data e hora da inscrição: </label>
+                <input type="datetime-local" name="data-inscricao">
+
+                <label for="data-inscricao">Escolha o mês para iniciar: </label>
+                <input type="month" name="mes">
+
+                <label for="semana-onboarding">Escolha uma semana para fazer seu onboarding: </label>
+                <input type="week" name="semana-onboarding">
+
+                <label for="horario-onboarding">Escolha o melhor horário para seu onboarding</label>
+                <input type="time" name="horario-onboarding">
+            </div>
+        </fieldset>
+
+
+        <fieldset>
+
+            <legend>Inscrição:</legend>
+
+            <div class="form-group">
+
+                <!-- Select Múltiplo -->
+                <select name="interesses" multiple>
+                    <optgroup label="Frontend">
+                        <option value="html">HTML</option>
+                        <option value="css">CSS</option>
+                        <option value="js">JavaScript</option>
+                    </optgroup>
+                    <optgroup label="Backend">
+                        <option value="python">Python</option>
+                        <option value="java">Java</option>
+                        <option value="php">PHP</option>
+
+                    </optgroup>
+                </select>
+
+                <div class="nivel-conhecimento">
+                    <label for="nivel-conhecimento">Nível de conhecimento em programação</label>
+                    <input type="range" name="nivel-conhecimento" min="0" max="100" step="5">
+                </div>
+
+            </div>
+        </fieldset>
+
+
+        <!-- Checkbox -->
+         <div class="parte-final">
+
+            <div>
+        <input type="checkbox" name="aceito" id="aceito">
+        <label for="aceito">Aceito os termos de uso</label>
+    </div>
+
+        <button class="botao-enviar" type="submit">Enviar formulário</button>
+
+    </div>
+
+    </form>
+
+</body>
+
+</html>

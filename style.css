@@ -1,0 +1,83 @@
+* {
+   
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Funnel Sans", sans-serif;
+   
+}
+
+form {
+    margin-left: 5%;
+    margin-right: 5%;
+    flex-direction: column;
+   
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+    padding: 3%;
+}
+
+input{
+    margin-bottom: 2%;
+    
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"] {
+    width: 50%;
+  }
+  input[type="number"],
+  input[type="color"],
+  input[type="datetime-local"],
+  input[type="month"],
+  input[type="week"],
+  input[type="time"] {
+    width: 20%;
+  }
+
+  textarea{
+    width: 50%;
+    margin-top: 1%;
+  }
+
+  fieldset{
+    margin-bottom: 3%;
+  }
+  
+  .github{
+    margin-top: 2%;
+    flex-direction: column;
+
+  }
+
+  .foto-perfil{
+    margin-bottom: 1%;
+    margin-top: 3%;
+
+  }
+
+  .nivel-conhecimento{
+margin-top: 3%;
+  }
+
+  optgroup {
+    padding-left: 1%;
+    padding-top: 1%;
+  }
+
+  .parte-final{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .parte-final button{
+    width: 25%;
+    margin-top: 3%;
+  }
+
+  .botao-enviar{
+  align-items: center;
+  }
