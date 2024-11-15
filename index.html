@@ -17,7 +17,7 @@
         </header>
 
         <fieldset>
-            <legend>Dados Pessoais</legend>
+            <legend> Dados Pessoais </legend>
 
             <div class="form-group">
 
@@ -82,7 +82,7 @@
 
         <fieldset>
 
-            <legend>Inscrição:</legend>
+            <legend> Dados para matrícula: </legend>
 
             <div class="form-group">
 
@@ -112,11 +112,12 @@
 
         <fieldset>
 
-            <legend>Inscrição:</legend>
+            <legend> Curso de interesse: </legend>
 
             <div class="form-group">
 
                 <!-- Select Múltiplo -->
+                <label for="interessess">Escolha o curso que você deseja se matricular </label>
                 <select name="interesses" multiple>
                     <optgroup label="Frontend">
                         <option value="html">HTML</option>
@@ -132,7 +133,7 @@
                 </select>
 
                 <div class="nivel-conhecimento">
-                    <label for="nivel-conhecimento">Nível de conhecimento em programação</label>
+                    <label for="nivel-conhecimento">Nível de conhecimento no curso selecionado</label>
                     <input type="range" name="nivel-conhecimento" min="0" max="100" step="5">
                 </div>
 
@@ -143,9 +144,9 @@
         <!-- Checkbox -->
          <div class="parte-final">
 
-            <div>
-        <input type="checkbox" name="aceito" id="aceito">
-        <label for="aceito">Aceito os termos de uso</label>
+            <div class="aceito" style="width: 90%;">
+        <input type="checkbox" name="aceito" id="aceito" >
+        <label for="aceito" style="width: 100%;">Aceito os termos de uso</label>
     </div>
 
         <button class="botao-enviar" type="submit">Enviar formulário</button>

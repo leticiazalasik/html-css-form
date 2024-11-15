@@ -18,6 +18,10 @@ form {
     padding: 3%;
 }
 
+legend{
+  font-weight: bold;
+}
+
 input{
     margin-bottom: 2%;
     
@@ -68,16 +72,29 @@ margin-top: 3%;
     padding-top: 1%;
   }
 
-  .parte-final{
+  .parte-final {
     display: flex;
     flex-direction: column;
-  }
+}
 
-  .parte-final button{
-    width: 25%;
-    margin-top: 3%;
-  }
+.parte-final .aceito {
+    align-self: flex-start;  /* Mantém o checkbox alinhado à esquerda */
+}
 
-  .botao-enviar{
-  align-items: center;
-  }
+.parte-final button {
+    width: 25%;              /* Largura do botão */
+    margin-top: 3%;          /* Espaçamento entre o botão e o restante */
+    align-self: center;      /* Centraliza o botão */
+}
+
+.botao-enviar {
+    text-align: center;      /* Centraliza o texto dentro do botão */
+    padding: 1%;
+    font-size: large;
+    margin-bottom: 2%;
+}
+
+.aceito input[type="checkbox"] {
+    transform: scale(2.0);   /* Aumenta o tamanho do checkbox */
+    margin-right: 1%;        /* Espaçamento à direita do checkbox */
+}
