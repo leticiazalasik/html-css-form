@@ -6,6 +6,9 @@ const nome = document.getElementById('nome');
 const celular = document.getElementById('celular');
 const idade = document.getElementById('idade');
 const dataNascimento = document.getElementById('dataNascimento');
+const endereco = document.getElementById('endereco');
+const senha = document.getElementById('senha');
+
 
 
 // Função para validar CPF
@@ -37,6 +40,9 @@ nome.addEventListener('input', validateFields);
 celular.addEventListener('input', validateFields);
 idade.addEventListener('input', validateFields);
 dataNascimento.addEventListener('input', validateFields);
+endereco.addEventListener('input', validateFields);
+senha.addEventListener('input', validateFields);
+
 
 function validateFields() {
     let isValid = true;
@@ -68,6 +74,31 @@ function validateFields() {
         emailErro.textContent = '';
         email.classList.remove('invalid');
         email.classList.add('valid');
+    }
+
+    // Validar endereco
+    const enderecoRegex = /^(Rua\s)?(.+),?\s?(bairro\s)?(.+),?\s?(numero\s)?(\d+)$/;
+    const enderecoErro = document.getElementById('enderecoErro');
+    if (!enderecoRegex.test(endereco.value)) {
+        enderecoErro.textContent = 'Endereço inválido';
+        endereco.classList.add('invalid');
+        isValid = false;
+    } else {
+        enderecoErro.textContent = '';
+        endereco.classList.remove('invalid');
+        endereco.classList.add('valid');
+    }
+
+    // Validar senha 
+    const senhaRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+    if (!senhaRegex.test(senha.value)) {
+        senhaErro.textContent = 'Senha inválida';
+        senha.classList.add('invalid');
+        isValid = false;
+    } else {
+        senhaErro.textContent = '';
+        senha.classList.remove('invalid');
+        senha.classList.add('valid');
     }
 
     // Validar celular
@@ -131,3 +162,9 @@ form.addEventListener('submit', (e) => {
         // Aqui você enviaria os dados para o servidor
     }
 });
+
+function limparPreferencias() {
+    localStorage.removeItem('userPreferences');
+    form.reset();
+    alert('Preferências removidas!');
+}

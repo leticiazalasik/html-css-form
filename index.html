@@ -71,6 +71,12 @@
                     </select>
                 </div>
 
+                <div>
+                    <label for="endereco">Endereço:</label>
+                    <input type="text" id="endereco" required autofocus placeholder="Rua xxx, bairro xxx, numero x">
+                    <span class="error" id="enderecoErro"></span>
+                </div>
+
                 <div class="foto-perfil">
                     <!-- Upload de imagem -->
                     <label for="foto-perfil">Foto para seu perfil</label>
@@ -110,8 +116,11 @@
                     <span class="error" id="emailErro"></span>
                 </div>
 
-                <label for="senha">Senha:</label>
-                <input type="password" name="senha" minlength="8">
+                <div>
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" required autofocus minlength="8" placeholder="Deve conter número, maiúsculas e no mín. 8 carcteres">
+                    <span class="error" id="senhaErro"></span>
+                </div>
 
                 <label for="busca">Digite a cidade do seu polo</label>
                 <input type="search" name="busca">
@@ -173,6 +182,8 @@
         <button class="botao-enviar" type="submit" id="submitBtn">Enviar formulário</button>
 
     </div>
+
+    <button type="button" onclick="limparPreferencias()">Limpar Preferências</button>
 
     </form>
 
