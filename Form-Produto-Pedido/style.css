@@ -1,0 +1,21 @@
+*{
+    margin-top: 1%;
+    margin-left: 1%;
+
+}
+
+button{
+    background-color: rgba(199, 221, 237, 0.781);
+    padding: 1%;
+}
+
+.produto{
+    border: solid 3px rgb(0, 104, 188);
+    border-radius: 2%;
+    width: 20%;
+    padding: 1%;
+}
+
+.endereco input{
+width: 50%;
+}

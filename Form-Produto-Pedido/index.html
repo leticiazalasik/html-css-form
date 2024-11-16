@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Página de Pedidos</title>
+</head>
+
+<body>
+
+    <form action="/enviar" method="POST" class="form" novalidate id="preferencesForm">
+
+        <!-- Cabeçalho do formulário -->
+        <header class="form-header">
+            <h2>-- PEDIDO --</h2>
+        </header>
+
+        <div class="form-group">
+
+            <div class="produto">
+                <h4>Produto 1</h4>
+                <p>R$ 10.00</p>
+                <label for="produto1">Quantidade</label>
+                <input type="number" id="produto1" min="0" max="10" value="0"> <!-- Exemplo de quantidade máxima: 10 -->
+            </div>
+
+            <div class="produto">
+                <h4>Produto 2</h4>
+                <p>R$ 20.00</p>
+                <label for="produto2">Quantidade</label>
+                <input type="number" id="produto2" min="0" max="5" value="0"> <!-- Exemplo de quantidade máxima: 5 -->
+            </div>
+
+            <div>
+                <label for="total">Total:</label>
+                <input type="text" id="total" readonly>
+            </div>
+
+            <hr style="width: 75%; color: black;">
+            <div class="endereco">
+                <h4>Dados de Entrega</h4>
+                <label for="endereco">Endereço:</label>
+                <input type="text" id="endereco" required>
+            </div>
+
+            <div>
+                <h4>Método de Pagamento</h4>
+                <label for="metodoPagamento">Escolha o método de pagamento:</label>
+                <select id="metodoPagamento" required>
+                    <option value="cartao">Cartão de Crédito</option>
+                    <option value="boleto">Boleto</option>
+                    <option value="pix">PIX</option>
+                </select>
+            </div>
+
+            <div class="parte-final">
+                <button class="botao-enviar" type="submit" id="submitBtn">Enviar Formulário</button>
+                <button type="button" id="clearBtn">Limpar Preferências</button>
+            </div>
+        </div>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
